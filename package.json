@@ -1,0 +1,60 @@
+{
+  "name": "styled-error",
+  "version": "0.1.0",
+  "description": "Cleaner Nodejs errors",
+  "main": "./dist/cjs/src/index.js",
+  "module": "./dist/mjs/index.js",
+  "bin": "./dist/cjs/src/bin.js",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/mjs/index.js"
+      },
+      "require": {
+        "default": "./dist/cjs/src/index.js"
+      }
+    }
+  },
+  "engines": {
+    "pnpm": ">=7"
+  },
+  "type": "module",
+  "author": {
+    "name": "Sidharth K."
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "tap",
+    "snap": "tap",
+    "compile": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "prepublish": "npm run compile"
+  },
+  "dependencies": {
+    "deepmerge": "^4.3.1",
+    "lodash": "^4.17.21",
+    "renderkid": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/tap": "^15.0.9",
+    "prettier": "^3.0.3",
+    "tap": "^16.3.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "pretty",
+    "styled",
+    "error",
+    "exception",
+    "debug",
+    "error-handling",
+    "coffeescript",
+    "readable",
+    "colorful",
+    "prettify",
+    "format",
+    "human",
+    "styled"
+  ]
+}
